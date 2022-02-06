@@ -1,0 +1,332 @@
+/* 
+ * {
+    border: 1px solid red !important;
+
+} 
+
+border-redius standar 8px
+header card :
+    - z-index = 100
+
+
+panel :
+    - z-index : 0
+panel card :
+    - z-index :101
+menu :
+    - z-index :105
+*/
+body {
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside.mobile {
+    width: 410px;
+    position: absolute;
+}
+
+.header .header-card {
+    height: 25vh;
+    background-color: DodgerBlue;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px;
+    position: relative;
+    z-index: 100;
+}
+
+.header .header-title {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+}
+.header .header-brand, .header .header-bell, .header .header-info {
+    text-shadow: 1px 1px 5px rgb(61, 60, 60);
+    color: #fff;
+}
+.header .header-brand{
+    text-decoration: none;
+    font-size: 26px;
+}
+.header .header-bell {
+    margin-left: auto;
+}
+
+
+
+.header .header-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.header-info .header-info-title {
+    padding: 5px;
+}
+
+/* panel */
+.panel {
+    position: relative;
+    top: -40px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.panel .panel-card{
+    position: relative;
+    z-index: 101;
+    background-color: #fff;
+    width: 80%;
+    height: 75px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    box-shadow: 1px 2px 5px #aeaeae,-1px -2px 5px #aeaeae ;
+}
+
+.panel .panel-card .panel-info {
+    flex-grow: 1;
+    text-align: center;
+    color: rgba(40, 40, 41, 0.452);
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.panel .panel-card .image-panel {
+    width: 65px;
+    height: 40px;
+    margin: auto;
+    padding: 3px;
+}
+.panel .panel-card .image-panel img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+.panel-card .panel-info .panel-info-title {
+    padding: 10px;
+}
+.panel-card .panel-info .panel-info-title i {
+    font-size: 22px;
+}
+.panel-card .panel-info .panel-info-title span,
+.panel-card .panel-info .panel-info-title h5{
+    position: relative;
+    margin-top: -25px;
+
+}
+.panel-card .panel-info .panel-info-title h5 {
+    color: #fff;
+    text-shadow: 2px 0px 3px #000;
+    font-size: 20px;
+    font-weight: 900;
+}
+.panel-card .panel-info .panel-info-title span {
+    font-size: 11px;
+}
+
+/* small menu */
+
+.small-menu {
+    height: 200px !important; 
+    border-radius: 10px;
+}
+.small-menu span {
+    display: flex;
+    padding: 10px;
+}
+.panel .small-menu .icon-menu {
+    text-decoration: none;
+    padding: 10px;
+
+}
+.panel .small-menu .icon-menu p {
+    text-align: center;
+    color: #aeaeae;
+    font-size: 11px;
+}
+.panel .small-menu .icon-menu .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.panel .small-menu .icon-menu .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+background: #fff;
+height: calc((100% - 30px) / 3) !important;
+
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
+}
+
+/*akhir swiper*/
+
+
+section.product-brand {
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    top: -30px;
+    padding-bottom: 20px;
+}
+
+.product-brand .brand-title {
+    display: flex;
+    padding: 10px !important;
+}
+
+.product-brand .icon-menu {
+    text-decoration: none;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+}
+
+.product-brand .icon-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.menu {
+    z-index: 105;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 410px;
+    background-color: dodgerblue;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.menu .menu-card {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+.menu .menu-card .menu-link {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+}
+.menu .menu-card .menu-link i {
+    font-size: 24px;
+}
+.menu .menu-card .menu-link span {
+    font-size: 11px;
+    padding: 2px;
+}
+.menu .menu-card .menu-link.brcode {
+    position: relative;
+    top: -12px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 5px solid dodgerblue;
+}
+.menu .menu-card .menu-link.brcode i{
+    font-size: 28px;
+    color: dodgerblue;
+}
+
+/* Artikel */
+section.artikel {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    margin-top: -20px;
+    padding: 10px;
+}
+.artikel .title-artikel{
+    display: flex;
+}
+.artikel .card-artikel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.artikel .card-title {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #aeaeae;
+    border-radius: 5px;
+    margin-bottom: 5px;  
+}
+
+.artikel .card-artikel .image{
+    width: 180px;
+    border-bottom: 1px solid #aeaeae;
+}
+.artikel .card-artikel .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-content: center;
+}
+.artikel .card-artikel .content-artikel {
+    padding: 5px;
+}
+.artikel .card-artikel .content-artikel .content-title {
+    font-size: 12px;
+    font-weight: 800;
+}
+.artikel .card-artikel .content-artikel .subtitle {
+    font-size: 11px;
+    padding-top: 5px;
+}
+.artikel .card-artikel .btn {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.artikel .card-artikel .btn button {
+    border-radius: 50px;
+    background-color: dodgerblue;
+    border: none;
+    color: #fff;
+    height: 30px;
+}
+.artikel .card-artikel .btn button:hover {
+    background-color: rgb(23, 112, 201);
+}
